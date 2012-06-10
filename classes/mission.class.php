@@ -34,7 +34,7 @@ class mission extends Buzzsql {
 			foreach ($researched as $k =>  $r) {
 				$pre_res[$k] = $r->id;
 			}
-			$pre_res =' OR `prereq_building_id` = ' . implode(' OR `prereq_research_id` = ', $pre_res);
+			$pre_res =' OR `prereq_research_id` = ' . implode(' OR `prereq_research_id` = ', $pre_res);
 		} else {
 			$pre_res = '';
 		}
