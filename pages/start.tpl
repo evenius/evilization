@@ -21,7 +21,7 @@
 	<hr class="clear" />
 	
 	<label>Choose your Alias</label>
-	<input type="text" placeholder="e.g. Dr. Killfox"/>
+	<input type="text" name="alias" placeholder="e.g. Dr. Killfox"/>
 	
 	<hr class="clear" />
 	
