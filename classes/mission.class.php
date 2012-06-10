@@ -29,7 +29,7 @@ class mission extends Buzzsql {
 		}
 			
 		$pre_res = array();
-		$researched = org_researched::select()->where($org)->many();   
+		$researched = org_researched::select()->where($org)->many();
 		if ($researched) {
 			foreach ($researched as $k =>  $r) {
 				$pre_res[$k] = $r->id;
@@ -39,7 +39,19 @@ class mission extends Buzzsql {
 			$pre_res = '';
 		}
 		
-		$available_missions = mission::select()->where(
+		$pre_mis = array();
+		$missioned = org_missioned::select()->where($org)->many();
+		if ($missioned) {
+			foreach ($missioned as $k =>  $m) {
+				$pre_mis[$k] = $m->id;
+			}
+			$pre_mis = '( id != ' . implode('`id` != ',$pre_mis).') AND ';
+		} else {
+			$pre_mis = '';
+		}
+		
+		$available_missions = mission::select()->where( 
+			$pre_mis .
 			'( `prereq_recruit_id` = 0 ' . $pre_r . ' )' .
 			' AND ( `prereq_building_id` = 0 ' . $pre_b . ' )' .
 			' AND ( `prereq_research_id` = 0 ' . $pre_res . ' )'

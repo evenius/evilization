@@ -5,3 +5,5 @@
 {if $res}<a href="/research">Research Center</a>{/if}
 <br />
 <a href="/build">Building center</a>
+<br />
+<a href="/recruitment">Recruitment center</a>

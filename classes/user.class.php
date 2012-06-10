@@ -7,4 +7,8 @@ class user extends Buzzauth {
 	function __toString() {
 		return $this->firstname . " " . $this->lastname;
 	}
+	
+	function getOrganization() {
+		return organization::select()->where(array('owner_user_id' => $this->id))->one();
+	}
 }	
