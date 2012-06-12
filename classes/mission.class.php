@@ -4,7 +4,7 @@ class mission extends Buzzsql {
 	function getAvailable () {
 		
 		
-		$org = organization::select()->where(array('owner_user_id' => user::get_auth()->id))->one();
+		$org = organization::select()->where(array('owner_user_id' => user::get_auth()))->one();
 		
 		$pre_r = array();
 		$recruited = org_recruited::select()->where($org)->many();

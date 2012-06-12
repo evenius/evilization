@@ -1,0 +1,137 @@
+@font-face { font-family: Nougat; src: url(/font/nougat.ttf); } 
+
+#start {
+	background: #F9B655;
+	height: 100%;
+	width: 100%;
+}
+
+#start h1 {
+	position: absolute;
+	left: 150px;
+	top: 152px;
+	font-family: Georgia;
+	font-size: 72px;
+	text-transform: lowercase;
+	z-index: 9;
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-shadow: 0 0 1px black;
+}
+
+#start h1:before {
+	content: '';
+	position: absolute;
+	display: block;
+	background: #D50100;
+	top: -25px;
+	left: -7px;
+	height: 135px;
+	width: 366px;
+	z-index: -1;
+	-webkit-transform: rotate(-3deg);
+	box-shadow: 0 0 3px #D50100;
+}
+
+#start a {
+	position: absolute;
+	left: 400px;
+	top: 308px;
+	letter-spacing: 3px;
+	font-size: 46px;
+	text-decoration: none;
+	color: #1D1D1B;
+	font-family: Nougat;
+	z-index: 9;
+	text-shadow: 0 0 1px #1D1D1B;
+}
+
+#start a:last-child {
+	top: 420px;
+}
+
+#start a:hover:before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: -10px;
+	display: block;
+	height: 80px;
+	width: 1000px;
+	background: #D50100;
+	z-index: -1;
+	-webkit-transform: rotate(-2deg);
+	box-shadow: 0 0 3px #D50100;
+}
+
+#start a:last-child:hover:before {
+	height: 1000px;
+	width: 300px;
+}
+
+#start .anims .block {
+	position: absolute;
+	width: 2000px;
+	height: 2000px;
+	background: #FCC876;
+	z-index: 7;
+} 
+
+#start .anims .block_1 {
+	top: 450px;
+	left: -1250px;
+	-webkit-transform: rotate(35deg);
+}
+
+#start .anims .block_2 {	
+	top: -1000px;
+	left: 1250px;
+	-webkit-transform: rotate(-40deg);
+}
+
+#start .anims .rocket {
+	position: absolute;
+	width: 26px;
+	height: 259px;
+	background: #fbcc88;
+	z-index: 6;
+	-webkit-transform: rotate(40deg);
+	box-shadow: 0 0 1px #fbcc88; 
+}
+
+#start .anims .rocket:before {
+	content: '';
+	position: absolute;
+	top: -46px;
+	left: 0;
+	border-radius: 1px;
+	border-top: 23px solid rgba(0,0,0,0);
+	border-right: 13px solid rgba(0,0,0,0);
+	border-bottom:23px solid #fbcc88;
+	border-left: 12px solid rgba(0,0,0,0);
+	box-shadow: 0 0 1px #fbcc88;
+	display: block;
+	width: 1px;
+	height: 0;
+}
+
+#start .anims .rocket_1 {
+	top: 400px;
+	left: 300px;
+}
+
+#start .anims .rocket_2 {
+	top: 350px;
+	left: 150px;
+}
+
+#start .anims .rocket_3 {
+	top: 500px;
+	left: 300px;
+}
+
+#start .anims .rocket_4 {
+	top: 570px;
+	left: 400px;
+}
+
